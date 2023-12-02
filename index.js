@@ -6,7 +6,7 @@ const port = process.env.PORT || 9000;
 app.listen(port, () => {
   console.log("Listening to port");
   console.log(port);
-  const terminal = child_process.spawn("python", ["test.py"]);
+  const terminal = child_process.spawn("python3", ["test.py"]);
   terminal.stdout.on("data", (data) => {
     console.log(data.toString());
   });
